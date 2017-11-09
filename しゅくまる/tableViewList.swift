@@ -143,7 +143,9 @@ class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegat
     func shukudaiCount() {
         let finishText = finish.text
         var count:Int = Int(finishText!)!
+        if count < label2Array.count {
         count += 1
+        }
         finish.text = count.description
         
         if 12/label2Array.count*count >= 3 {
