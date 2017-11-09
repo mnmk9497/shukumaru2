@@ -95,6 +95,7 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         
         tableView.dataSource = self    //追加
         tableView.delegate = self // 追加
+
     }
     
     
@@ -112,10 +113,10 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         
         cell.setCell(icon: imgArray[indexPath.row], title: label2Array[indexPath.row], tapBtnStates: buttonArray[indexPath.row], hanamaruStates: img2Array[indexPath.row])
         
-        
         return cell
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -43,6 +43,8 @@ class CustomCell: UITableViewCell {
         }else if hanamaruStates == 1 {
             hanamaruView.image = UIImage(named: "はなまる")
         }
-    } 
+    }
+
+    
 
 }

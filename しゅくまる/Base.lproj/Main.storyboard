@@ -922,6 +922,9 @@
                                                                     <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="btnTapAction:" destination="Fj3-0G-nnm" eventType="touchUpInside" id="IF3-sb-YLW"/>
+                                                            </connections>
                                                         </button>
                                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAu-NN-cQy">
                                                             <rect key="frame" x="119" y="6" width="77" height="77"/>
@@ -996,6 +999,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="しゅくだい" id="4av-uG-EsB"/>
                     <connections>
+                        <outlet property="btnTapAction" destination="KKS-Oa-mAp" id="qi5-Rt-czt"/>
                         <outlet property="finish" destination="0dV-Qc-fmK" id="IXT-47-YHq"/>
                         <outlet property="shukudaisuu" destination="sRz-75-DwQ" id="97E-d7-LIN"/>
                         <outlet property="shukudaisuu2" destination="riQ-10-Ckb" id="fzC-x5-JaC"/>
