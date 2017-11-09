@@ -9,7 +9,7 @@
 import UIKit
 import  SkyWay
 
-class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegate, CustomTableViewCellDelegate {
 
     var imgArray = Array<String>()
     var label2Array = Array<String>()
@@ -94,8 +94,6 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         let TodayDate = formatter.string(from: selectDate as Date)
         todayLabel.text = TodayDate
         
-        self.tableView.dataSource = self    //追加
-        self.tableView.delegate = self // 追加
     }
     
     
@@ -111,10 +109,16 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         //tableCellのIDでUITableViewCellのインスタンスを生成
         let cell = table.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
         
-        cell.setCell(icon: imgArray[indexPath.row], title: label2Array[indexPath.row], tapBtnStates: buttonArray[indexPath.row], hanamaruStates: img2Array[indexPath.row])
+        cell.cellObject = setCell(icon: imgArray[indexPath.row], title: label2Array[indexPath.row], tapBtnStates: buttonArray[indexPath.row], hanamaruStates: img2Array[indexPath.row])
+        
+        cell.delegate = self as! CustomTableViewCellDelegate
         
         return cell
         
+    }
+    
+    func updateCellObject(object: setCell) {
+            dump(object)
     }
     
     
