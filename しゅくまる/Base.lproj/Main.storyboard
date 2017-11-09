@@ -999,6 +999,7 @@
                         <outlet property="finish" destination="0dV-Qc-fmK" id="IXT-47-YHq"/>
                         <outlet property="shukudaisuu" destination="sRz-75-DwQ" id="97E-d7-LIN"/>
                         <outlet property="shukudaisuu2" destination="riQ-10-Ckb" id="fzC-x5-JaC"/>
+                        <outlet property="tableView" destination="9ya-Hg-szy" id="UF0-6V-rlq"/>
                         <outlet property="todayLabel" destination="BW9-ie-0iD" id="BGR-kK-oCt"/>
                         <outlet property="view" destination="XSF-Vh-l0q" id="ZUz-3X-d1h"/>
                     </connections>

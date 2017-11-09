@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CustomCell: UITableViewCell {
 
     @IBOutlet weak var iconView: UIImageView!
@@ -21,7 +22,7 @@ class CustomCell: UITableViewCell {
     }
     
     func setCell(icon: String, title: String, tapBtnStates: Int, hanamaruStates: Int) {
-
+        
         iconView.image = UIImage(named: icon)
         
         titleLabel.text = String(describing: title)
@@ -42,6 +43,6 @@ class CustomCell: UITableViewCell {
         }else if hanamaruStates == 1 {
             hanamaruView.image = UIImage(named: "はなまる")
         }
-    }
+    } 
 
 }

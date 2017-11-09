@@ -26,6 +26,7 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
     
     @IBOutlet weak var todayLabel: UILabel!
 
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,22 +76,25 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         
         var shukudaiCount:Int = 0//宿題数を計算する値
         var finishCount:Int = 0 //終わった数を計算する値
-            
-            shukudaiCount = label2Array.count
-            
-            for num in 0 ..< label2Array.count {
-                finishCount += buttonArray[num]
-            }
-            shukudaisuu.text = String(shukudaiCount)
-            shukudaisuu2.text = String(shukudaiCount)
-            
-            finish.text = String(finishCount)
+        
+        shukudaiCount = label2Array.count
+        
+        for num in 0 ..< label2Array.count {
+            finishCount += buttonArray[num]
+        }
+        shukudaisuu.text = String(shukudaiCount)
+        shukudaisuu2.text = String(shukudaiCount)
+        
+        finish.text = String(finishCount)
         
         let selectDate = Date()
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "yyyy" + "年" + "MM" + "月" + "d" + "日"
         let TodayDate = formatter.string(from: selectDate as Date)
         todayLabel.text = TodayDate
+        
+        tableView.dataSource = self    //追加
+        tableView.delegate = self // 追加
     }
     
     
@@ -112,7 +116,6 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         return cell
         
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
