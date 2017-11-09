@@ -34,12 +34,13 @@ class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Do any additional setup after loading the view, typically from a nib.
         
         imgArray = [String](repeating: "", count: label2Array.count)
-        
-        
+
+    
+    
         for n in 0..<label2Array.count {
-            
+    
             switch label2Array[n]{
-                
+    
             case "かんじドリル":
                 imgArray[n] = "かんじドリルai"
                 break
@@ -113,15 +114,67 @@ class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegat
         cell.cellObject = setCell(icon: imgArray[indexPath.row], title: label2Array[indexPath.row], tapBtnStates: buttonArray[indexPath.row], hanamaruStates: img2Array[indexPath.row])
         
         cell.delegate = self
+        cell.indexPath = indexPath
         
         return cell
         
     }
     
+    
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var image5: UIImageView!
+    @IBOutlet weak var image6: UIImageView!
+    @IBOutlet weak var image7: UIImageView!
+    @IBOutlet weak var image8: UIImageView!
+    @IBOutlet weak var image9: UIImageView!
+    @IBOutlet weak var image10: UIImageView!
+    @IBOutlet weak var image11: UIImageView!
+    @IBOutlet weak var image12: UIImageView!
+    
+    
     func updateCellObject(object: setCell) {
             dump(object)
+        shukudaiCount()
     }
     
+    func shukudaiCount() {
+        let finishText = finish.text
+        var count:Int = Int(finishText!)!
+        count += 1
+        finish.text = count.description
+        
+        if 12/label2Array.count*count >= 3 {
+            image1.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+            image2.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+            image3.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+        if 12/label2Array.count*count >= 4 {
+            image4.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+        if 12/label2Array.count*count >= 6 {
+            image5.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+            image6.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+        if 12/label2Array.count*count >= 8 {
+            image7.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+            image8.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+        if 12/label2Array.count*count >= 9 {
+            image9.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+        if 12/label2Array.count*count >= 10 {
+            image10.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+        if 12/label2Array.count*count >= 12 {
+            image11.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+            image12.backgroundColor = UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0)
+        }
+
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

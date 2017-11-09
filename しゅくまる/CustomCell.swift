@@ -40,6 +40,8 @@ class CustomCell: UITableViewCell {
     
     weak var delegate: CustomTableViewCellDelegate!
     
+    var indexPath = IndexPath()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

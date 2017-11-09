@@ -725,8 +725,8 @@
                                                     <constraint firstAttribute="width" secondItem="AQL-nM-S5J" secondAttribute="height" multiplier="41:75" id="vdy-1W-cFe"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A4f-Cc-rBd">
-                                                <rect key="frame" x="864" y="120" width="41" height="75.5"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A4f-Cc-rBd">
+                                                <rect key="frame" x="863" y="120" width="41" height="75.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="A4f-Cc-rBd" secondAttribute="height" multiplier="41:75" id="tj1-CY-wEy"/>
@@ -1000,6 +1000,18 @@
                     <navigationItem key="navigationItem" title="しゅくだい" id="4av-uG-EsB"/>
                     <connections>
                         <outlet property="finish" destination="0dV-Qc-fmK" id="IXT-47-YHq"/>
+                        <outlet property="image1" destination="QUA-uK-Baz" id="BW8-I5-Q4B"/>
+                        <outlet property="image10" destination="W6L-ik-FZv" id="U3p-pz-8xu"/>
+                        <outlet property="image11" destination="AQL-nM-S5J" id="sk6-5g-fgJ"/>
+                        <outlet property="image12" destination="A4f-Cc-rBd" id="kNi-bt-Jqw"/>
+                        <outlet property="image2" destination="DPb-F2-FZh" id="dQ9-Sr-UsE"/>
+                        <outlet property="image3" destination="bgJ-ns-slJ" id="CEd-50-lAP"/>
+                        <outlet property="image4" destination="pmk-qN-J0g" id="hgc-Ix-85m"/>
+                        <outlet property="image5" destination="c9v-Yz-OJB" id="JuB-9t-sPo"/>
+                        <outlet property="image6" destination="5St-h8-zTq" id="h33-QP-Zdr"/>
+                        <outlet property="image7" destination="bX8-ud-fEy" id="R1I-G9-VhJ"/>
+                        <outlet property="image8" destination="G9I-fX-saC" id="bZl-7x-PRv"/>
+                        <outlet property="image9" destination="Sj6-LH-7Nw" id="6ot-6D-Ft5"/>
                         <outlet property="shukudaisuu" destination="sRz-75-DwQ" id="97E-d7-LIN"/>
                         <outlet property="shukudaisuu2" destination="riQ-10-Ckb" id="fzC-x5-JaC"/>
                         <outlet property="tableView" destination="9ya-Hg-szy" id="UF0-6V-rlq"/>
@@ -1009,7 +1021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4q-n5-Cax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.7265625" y="-2620.3125"/>
+            <point key="canvasLocation" x="746" y="-2636"/>
         </scene>
         <!--Tab First View Controller-->
         <scene sceneID="6Rp-gK-ghG">

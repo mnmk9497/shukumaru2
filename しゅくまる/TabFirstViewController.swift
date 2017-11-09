@@ -281,7 +281,11 @@ class TabFirstViewController: UIViewController, UITableViewDelegate {
     
     /// 画面遷移するかの判定処理
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (identifier == "mySegue") {
         return true;
+        }else {
+            return false
+        }
     }
     
     /// 画面遷移時の処理
@@ -293,6 +297,7 @@ class TabFirstViewController: UIViewController, UITableViewDelegate {
         }
     }
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
