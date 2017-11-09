@@ -27,13 +27,14 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var todayLabel: UILabel!
 
     @IBOutlet weak var tableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         imgArray = [String](repeating: "", count: label2Array.count)
-
+        
         
         for n in 0..<label2Array.count {
             
@@ -64,7 +65,7 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
                 imgArray[n] = "りかai"
                 break
             case "がいこくご":
-            imgArray[n] = "そのたai"
+                imgArray[n] = "そのたai"
                 break
             default:
                 break
@@ -93,9 +94,8 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
         let TodayDate = formatter.string(from: selectDate as Date)
         todayLabel.text = TodayDate
         
-        tableView.dataSource = self    //追加
-        tableView.delegate = self // 追加
-
+        self.tableView.dataSource = self    //追加
+        self.tableView.delegate = self // 追加
     }
     
     
@@ -133,10 +133,7 @@ class tableViewList: UIViewController,UITableViewDataSource, UITableViewDelegate
     //画面の向きを指定
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         get {
-        return .landscape
+            return .landscape
         }
     }
-    
-    
-
 }

@@ -28,6 +28,5 @@ class ButtomCustom: UIButton {
             layer.borderColor = borderColor.cgColor
         }
     }
-        //var cellIndexPath: IndexPath!
 
 }
