@@ -279,26 +279,20 @@ class TabFirstViewController: UIViewController, UITableViewDelegate {
 
     }
     
-    @IBAction func okTap(_ sender: Any) {
-
+    /// 画面遷移するかの判定処理
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return true;
+    }
+    
+    /// 画面遷移時の処理
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "mySegue") {
             ataiwatashi()
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC:tableViewList = storyboard.instantiateViewController(withIdentifier: "foo") as! tableViewList
-            nextVC.label2Array = self.label2Array
-            navigationController?.pushViewController(nextVC, animated: true)
-            
-            func didReceiveMemoryWarning() {
-                super.didReceiveMemoryWarning()
-                // Dispose of any resources that can be recreated.
-                
-            }
-
-        
+            let secondViewController:tableViewList = segue.destination as! tableViewList
+            secondViewController.label2Array = self.label2Array
+        }
     }
 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

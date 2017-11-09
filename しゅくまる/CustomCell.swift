@@ -38,7 +38,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var tapBtn: ButtomCustom!
     @IBOutlet weak var hanamaruView: UIImageView!
     
-        weak var delegate: CustomTableViewCellDelegate!
+    weak var delegate: CustomTableViewCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,9 +48,9 @@ class CustomCell: UITableViewCell {
     var cellObject: setCell! {
         didSet {
             
-            iconView?.image = UIImage(named: cellObject.iconView)
+            iconView.image = UIImage(named: cellObject.iconView)
             
-            titleLabel?.text = String(describing: cellObject.title)
+            titleLabel.text = String(describing: cellObject.title)
             
             if cellObject.tapBtn == 0 {
                 tapBtn?.setTitle("これから!", for: .normal)
@@ -73,6 +73,9 @@ class CustomCell: UITableViewCell {
     
     @IBAction func tapBtnAction(_ sender: Any) {
         
+        tapBtn?.setTitle("おわった!", for: .normal)
+        tapBtn?.setTitleColor(UIColor(red: 48/255, green: 148/255, blue: 137/255, alpha: 1.0), for: .normal)
+        tapBtn?.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         cellObject.tapBtn = 1
         
         // DelegateでViewControllerに処理を渡す

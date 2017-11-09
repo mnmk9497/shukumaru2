@@ -919,7 +919,7 @@
                                                                     <color key="value" red="0.1901514232" green="0.5821224451" blue="0.53833293910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="value" red="0.00063651037635281682" green="0.50318652391433716" blue="0.48832142353057861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
@@ -1175,7 +1175,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="okTap:" destination="kTl-vV-f1n" eventType="touchUpInside" id="cLa-ZV-EgF"/>
+                                    <segue destination="bHk-bq-8gL" kind="show" identifier="mySegue" id="v7L-q3-GNa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09c-Ln-mZs" customClass="ButtomCustom" customModule="しゅくまる" customModuleProvider="target">
@@ -1452,7 +1452,6 @@
                         <outlet property="sakubun" destination="s4b-hu-kml" id="nSb-l8-9Do"/>
                         <outlet property="sansuu" destination="7pc-sk-4mM" id="T3f-qQ-4gS"/>
                         <outlet property="shakai" destination="xD4-zS-cC7" id="OnL-bo-ZCk"/>
-                        <segue destination="bHk-bq-8gL" kind="show" identifier="mySegue" id="pPN-l4-DBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxF-ae-kDA" userLabel="First Responder" sceneMemberID="firstResponder"/>

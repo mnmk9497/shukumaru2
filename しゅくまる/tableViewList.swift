@@ -94,6 +94,7 @@ class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegat
         let TodayDate = formatter.string(from: selectDate as Date)
         todayLabel.text = TodayDate
         
+        
     }
     
     
@@ -111,7 +112,7 @@ class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         cell.cellObject = setCell(icon: imgArray[indexPath.row], title: label2Array[indexPath.row], tapBtnStates: buttonArray[indexPath.row], hanamaruStates: img2Array[indexPath.row])
         
-        cell.delegate = self as! CustomTableViewCellDelegate
+        cell.delegate = self
         
         return cell
         
@@ -127,6 +128,8 @@ class tableViewList: UIViewController, UITableViewDataSource, UITableViewDelegat
         //Dispose of any resources that can be recreated.
         
     }
+    
+    
     //画面を自動回転させない
     override var shouldAutorotate: Bool {
         get {
